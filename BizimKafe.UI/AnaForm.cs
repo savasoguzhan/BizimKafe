@@ -22,7 +22,6 @@ namespace BizimKafe.UI
             VerileriYukle();
             MasalariOlustur();
         }
-
         private void VerileriYukle()
         {
             try

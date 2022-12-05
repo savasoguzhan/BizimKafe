@@ -37,6 +37,23 @@ namespace BizimKafe.UI
             lblMasano.Text = _siparis.MasaNo.ToString("00");
             lblOdemeTutar.Text = _siparis.ToplamTutarTL;
             dgvSiparisDetaylar.DataSource = _siparis.SiparisDetaylar.ToList();
+            MasaNolariYukle();
+        }
+
+        private void MasaNolariYukle()
+        {
+            cbMasaNo.Items.Clear();
+
+            for (int i = 1; i <= _db.MasaAdet; i++)
+            {
+                if (_db.AktifSiparisler.Any(x => x.MasaNo == i))
+                {
+                    cbMasaNo.Items.Add(i);
+
+
+                }
+
+            }
         }
 
         private void btnUrunEkle_Click(object sender, EventArgs e)

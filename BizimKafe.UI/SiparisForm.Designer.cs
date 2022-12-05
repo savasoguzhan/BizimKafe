@@ -186,6 +186,7 @@
             this.btnTasi.TabIndex = 8;
             this.btnTasi.Text = "TASI";
             this.btnTasi.UseVisualStyleBackColor = false;
+            this.btnTasi.Click += new System.EventHandler(this.btnTasi_Click);
             // 
             // lblMasano
             // 
@@ -283,6 +284,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SiparisForm";
             this.Text = "SiparisForm";
+            this.Load += new System.EventHandler(this.SiparisForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetaylar)).EndInit();
             this.ResumeLayout(false);
